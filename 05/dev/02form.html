@@ -7,28 +7,30 @@
 </head>
 <body>
 
-  <div class="wrap">
-    <form method='post' action='#' style="width: 80%; margin: 0 auto;"> 
+  <div class="wrap" style="width: 80%; margin: 0 auto;">
+    <form method='post' action='#'> 
       <fieldset>
         <legend>배송 정보</legend>
         <ul>
           <li>
             <label for="userName">이름:</label> 
-            <input type="text" name="name" id="userName" placeholder="이름입력">
+            <input type="text" name="name" id="userName" size="20" maxlength="5" minlength="2" 
+            value="홍길동" placeholder="이름입력">
           </li>
           <li>
             <label for="userAddress">배송 주소:</label> 
-            <input type="text" name="address" id="userAddress" placeholder="배송주소입력">
+            <input type="text" name="address" id="userAddress" size="40" placeholder="배송주소입력">
           </li>
           <li>
             <label for="userEmail">이메일:</label> 
-            <input type="email" name="email" id="userEmail" placeholder="이메일입력">
+            <input type="email" name="email" id="userEmail" required placeholder="이메일입력">
           </li>
           <li>
             <label for="userPhone">연락처:</label> 
-            <input type="text" name="phone" id="userPhone" placeholder="연락처입력">
+            <input type="tel" name="phone" id="userPhone" minlength="11" maxlength="11" placeholder="01012345678">
           </li>
         </ul>
+        <input type="submit" value="서버로 전송하기">
       </fieldset>
     </form>
   </div>
