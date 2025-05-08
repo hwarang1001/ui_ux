@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    table{
+      padding: 10px;
+    }
+    table,th,td{
+      border: 1px dotted black;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    button{
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 50%; margin: 0 auto;">
+    <h1>회원가입</h1>
+    <hr>
+    <p>① 다음의 회원정보를 입력하여 주시면 가입절차가 완료됩니다.</p>
+    <p>② 허위로 작성된 가입정보일 경우 임의로 삭제처리 될 수 있으니 주의해 주세요.</p>
+    <form method='get' action='#'>
+      <table>
+        <colgroup>
+          <col style="background-color: antiquewhite; width: 200px;">
+          <col style="width: 1000px;">
+        </colgroup>
+        <tr>
+          <td>▷이름(실명)</td>
+          <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+          <td>▷생년월일</td>
+          <td>
+            <input type="date" name="date" id="date">
+            <input type="radio" name="solar_lunar" id="solar" value="양력">양력
+            <input type="radio" name="solar_lunar" id="lunar" value="음력">음력
+          </td>
+        </tr>
+        <tr>
+          <td>▷회원 ID</td>
+          <td>
+            <input type="text" name="id" id="id">
+            <button>ID 중복확인</button>
+            <p>회원 ID는 가입후 변경이 불가능합니다. <br>
+              회원ID와 비밀번호는 영문자로 시작하는 4~18자의 영문,숫자를 조합하셔서 <br>
+              공백없이 가입해주세요.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>▷비밀번호</td>
+          <td>
+            <input type="password" name="password" id="password"> 재입력
+            <input type="password" name="password2" id="password2">
+          </td>
+        </tr>
+        <tr>
+          <td>▷이메일</td>
+          <td>
+            <input type="email" name="email" id="email">
+            <input type="checkbox" name="ckMail" id="ckMail">공지메일을 받음
+          </td>
+        </tr>
+        <tr>
+          <td>▷자택전화</td>
+          <td>
+            <select name="homePhone" id="homePhone">
+              <option value="02">02</option>
+              <option value="031">031</option>
+            </select>
+            -
+            <input type="tel" name="homePhone2" id="homePhone" minlength="4" maxlength="4" size="4" >
+            -
+            <input type="tel" name="homePhone3" id="homePhone2" minlength="4" maxlength="4" size="4">
+          </td>
+        </tr>
+        <tr>
+          <td>▷휴대폰</td>
+          <td>
+            <select name="phone" id="phone">
+              <option value="010">010</option>
+              <option value="011">011</option>
+            </select>
+            -
+            <input type="tel" name="phone2" id="phone2" minlength="4" maxlength="4" size="4">
+            -
+            <input type="tel" name="phone3" id="phone3" minlength="4" maxlength="4" size="4">
+            <input type="checkbox" name="ckPhone" id="ckPhone">상담전화와 문자메세지를 받음
+          </td>
+        </tr>
+        <tr>
+          <td>▷자택주소</td>
+          <td><input type="text" name="address" id="address" size="50"></td>
+        </tr>
+        <tr>
+          <td>▷직업</td>
+          <td>
+            <select name="job" id="job">
+              <option value="무직">무직</option>
+              <option value="군인">군인</option>
+              <option value="개발자">개발자</option>
+              <option value="공무원">공무원</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>▷가입경로</td>
+          <td>
+            <h4>구인구직사이트</h4>
+            <input type="radio" name="jobVacancy" id="radio2" value="알바몬">알바몬
+            <input type="radio" name="jobVacancy" id="radio3" value="알바천국국">알바천국
+            <input type="radio" name="jobVacancy" id="radio4" value="인쿠르트">인쿠르트
+            <input type="radio" name="jobVacancy" id="radio5" value="잡코리아">잡코리아
+            <h4>-------------------------------------------------------------------</h4>
+            <h4>포탈사이트</h4>
+            <input type="radio" name="portalSite" id="radio2" value="네이버검색">네이버검색
+            <input type="radio" name="portalSite" id="radio3"
+            value="다음검색">다음검색
+            <input type="radio" name="portalSite" id="radio4"
+            value="카페">카페
+            <input type="radio" name="portalSite" id="radio5"
+            value="블로그">블로그
+            <h4>-------------------------------------------------------------------</h4>
+            <input type="radio" name="radio4" id="radio6" value="기타"><strong>기타</strong>
+            <input type="text" name="etc" id="etc">
+          </td>
+        </tr>
+      </table>
+      <div style="text-align: center; padding-top: 20px;">
+        <button type="submit">회원가입</button>
+        <button type="button" onClick="location.href='02login.html'">취소&이전</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

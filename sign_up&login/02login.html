@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+     label{
+      width: 100px;
+      margin: 5px 1px 5px 20px ;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 30%; margin: 0 auto;">
+    <h1>로그인</h1>
+    <hr>
+    <form method='get' action='#' style="width: 80%; margin: 0 auto;">
+      <fieldset style="margin-top: 10px;">
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id" minlength="6" maxlength="12" placeholder="최소6자~최대12자">
+        <hr>
+        <label for="password">비밀번호</label>
+        <input type="text" name="password" id="password" minlength="8" maxlength="12" placeholder="영문, 특수문자, 숫자 혼합 8~12자" >
+      </fieldset>
+      <button style="margin-top: 10px; width: 100%; height: 50px; background-color: rgb(96, 161, 222); color: aliceblue; font-size: 20px;">로그인</button>
+      <table>
+        <tr>
+          <td style="width: 50%;">
+            <input type="checkbox" name="save" id="save">
+            아이디 저장
+          </td>
+          <td>
+            <p>아이디찾기 </p>
+          </td>
+          <td>
+            <p>비밀번호 찾기 </p>
+          </td>
+          <td>
+            <a href="./01sign_up.html">회원가입</a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
