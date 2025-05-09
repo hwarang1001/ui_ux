@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    p{
+      text-align: center;
+    }
+    /* header영역 */
+    .header1{
+      height: 100px;
+      background-color: rgba(128, 128, 128,0.5);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header2{
+      height: 200px;
+      background-color: rgba(128, 128, 128,0.5);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* nav영역 */
+    nav{
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    nav>div{
+      width: 23%;
+      height: 50px;
+      background-color: rgba(128, 128, 128,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* main영역 */
+    main{
+      height: 400px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    main > div{
+      width: 52%;
+      background-color: rgba(128, 128, 128,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main > section{
+      width: 44%;
+    }
+    main > section > article:first-child{
+      height: 150px;
+      background-color: rgba(128, 128, 128,0.5);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main > section > article:last-child{
+      height: 220px;
+      background-color: rgba(128, 128, 128,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* footer영역 */
+    footer{
+      height: 200px;
+      background-color: rgba(128, 128, 128,0.5);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header1">
+      <span><p>company logo and slogan</p></span>
+    </header>
+    <header class="header2">
+      <span><p>header</p></span>
+    </header>
+    <nav>
+      <div><p>nav1</p></div>
+      <div><p>nav2</p></div>
+      <div><p>nav3</p></div>
+      <div><p>nav4</p></div>
+    </nav>
+    <main>
+      <div><p>about</p></div>
+      <section>
+        <article><p>quick links</p></article>
+        <article><p>quick links</p></article>
+      </section>
+    </main>
+    <footer>
+      <p>site plan and copyright info</p>
+    </footer>
+  </div>
+</body>
+</html>
