@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      background-color: beige;
+    }
+    .origin{
+      border: 1px solid black;
+    }
+    .origin > div{
+      transition-property: all;
+      transition-duration: 3s;
+      transition-timing-function: ease-in;
+      transition-delay: 2s;
+    }
+    .perspect{
+      perspective: 500px;
+    }
+    .rotatex:hover{
+      transform: skewX(45deg)
+    }
+    .rotatey:hover{
+      transform: skewY(45deg)
+    }
+    .rotatez:hover{
+      transform: skew(45deg, 45deg)
+    }
+    .rotate3d:hover{
+      transform: rotate3d(2.5,1.2, -1.5, 45deg)
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="origin perspect">
+      <div class="rotatex">
+        <img src="./../images/sunset.jpg" alt="노을하늘">
+      </div>
+    </div>
+    <div class="origin perspect">
+      <div class="rotatey">
+        <img src="./../images/sunset.jpg" alt="노을하늘">
+      </div>
+    </div>
+    <div class="origin perspect">
+      <div class="rotatez">
+        <img src="./../images/sunset.jpg" alt="노을하늘">
+      </div>
+    </div>
+    <div class="origin perspect">
+      <div class="rotate3d">
+        <img src="./../images/sunset.jpg" alt="노을하늘">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
