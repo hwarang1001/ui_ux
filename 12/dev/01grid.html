@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      position: relative;
+      height: 100vh;
+    }
+    .container{
+      width: 900px;
+      border: 3px solid red;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);  
+      grid-template-rows: repeat(2, 100px);
+      gap: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .item{
+      text-align: center;
+      border: 1px solid black;
+    }
+    .item:nth-child(2n){  /* 짝수만 */
+      background-color: yellow;
+    }
+    .item:nth-child(2n+1){ /* 홀수만 */
+      background-color: violet;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+</body>
+</html>
