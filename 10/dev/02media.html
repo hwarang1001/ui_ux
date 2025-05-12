@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      color: red;
+      background-color: beige;
+      border: 1px solid black;
+      margin-bottom: 10px;
+      text-align: center; /* 인라인을 가운데로 정렬하는 방법 */
+    }
+
+    /* 모바일 */
+    @media screen and (max-width: 600px) {
+      .header1 {
+        color: green;
+        background-color: yellow;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        text-align: center; /* 인라인을 가운데로 정렬하는 방법 */
+      }
+    }
+
+    /* 테블릿 pc */
+    @media screen and (min-width: 600px) and (max-width: 990px) {
+      .header2 {
+        color: orange;
+        background-color: white;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        text-align: center; /* 인라인을 가운데로 정렬하는 방법 */
+      }
+    }
+
+    /* 일반 pc */
+    @media screen and (min-width: 990px) and (max-width: 1200px) {
+      .header3 {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        text-align: center; /* 인라인을 가운데로 정렬하는 방법 */
+      }
+    }
+
+    /* 대형 pc */
+    @media screen and (min-width: 1200px) {
+      .header4 {
+        color: blue;
+        background-color: white;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        text-align: center; /* 인라인을 가운데로 정렬하는 방법 */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="header1">HTML1</h1>
+  <h1 class="header2">HTML2</h1>
+  <h1 class="header3">HTML3</h1>
+  <h1 class="header4">HTML4</h1>
+</body>
+
+</html>
