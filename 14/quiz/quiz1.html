@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      border: 1px solid black;
+      width: 500px;
+      height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>4의 배수일까 아닐까</h1>
+  <script>
+    let value = window.prompt("숫자를 입력하시오.")
+    if((value % 4) == 0){
+      document.write(`<p>${value}는 4의 배수입니다.</p>`);
+    }else{
+      document.write(`<p>${value}는 4의 배수가 아닙니다.</p>`);
+    }
+  </script>
+</body>
+</html>
