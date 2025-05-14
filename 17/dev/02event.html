@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    div.wrap{
+     width: 1120;
+     margin: 0 auto;
+     border: 3px dotted red;
+     padding: 10px;
+    }
+    div#result{
+      width: 300px;
+      height: 300px;
+      border: 3px dotted red;
+      margin: 0 auto;
+    }
+    ul{
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    ul > li > button{
+      width: 100px;
+      padding: 5px 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      border: 1px solid black;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li><button id="btnobj1">red</button></li>
+      <li><button id="btnobj2">green</button></li>
+      <li><button id="btnobj3">yellow</button></li>
+    </ul>
+    <div id="result"></div>
+  </div>
+  <script>
+    //1. 객체를 찾는다.
+    // let btnobj1 = document.querySelector('#btnobj1'); 
+    // let btnobj2 = document.querySelector('#btnobj2'); 
+    // let btnobj3 = document.querySelector('#btnobj3'); 
+    let btnobj = document.querySelectorAll('button');
+    let result = document.querySelector('#result');
+
+    //2. 객체 속성, 컨텍스트, 스타일, (이벤트 설정)
+    for(let i = 0; i < btnobj.length; i++){
+      btnobj[i].onmouseover = e =>{
+      let colorText = btnobj[i].innerHTML;
+      result.style.backgroundColor = colorText
+      };
+    }
+    // btnobj1.onmouseover = e =>{
+    //   let colorText = btnobj1.innerHTML;
+    //   result.style.backgroundColor = colorText
+    // };
+    // btnobj2.onmouseover = e =>{
+    //   let colorText = btnobj2.innerHTML;
+    //   result.style.backgroundColor = colorText
+    // };
+    // btnobj3.onmouseover = e =>{
+    //   let colorText = btnobj3.innerHTML;
+    //   result.style.backgroundColor = colorText
+    // };
+  </script>
+</body>
+</html>
