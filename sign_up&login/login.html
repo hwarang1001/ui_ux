@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1120px;
+      height: 100vh;
+      border: 1px solid black;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    header > div{
+      display: flex;
+      gap: 420px;
+      margin-bottom: 40px;
+    }
+    .main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mainRadio{
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .login{
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .login > .input{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .login > #login{
+      background-color: rgb(204, 5, 5);
+      color: white;
+      border: 1px solid gray;
+      font-size: large;
+      width: 100px;
+    }
+    .login > .input > input{
+      background-color: rgba(209, 204, 204,0.3);
+      width: 250px;
+      height: 30px;
+      border: 1px solid gray;
+    }
+    .mainCheckbox{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .mainButton{
+      display: flex;
+      justify-content: space-between;
+    }
+    .mainButton > a{
+      border: 1px solid gray;
+      background-color: rgba(146, 144, 144,0.3);
+      padding: 5px 10px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      text-decoration-line: none;
+      text-align: center;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <p>2025. 05. 15. 김화랑</p>
+        <p>http://127.0.0.1:5500/login.html</p>
+      </div>
+    </header>
+    <div class="main">
+      <form action="#" method="post">
+        <h1>로그인</h1>
+        <div class="maintop">
+          <div class="mainRadio">
+            <input type="radio" name="member" id="member1" checked> 회원
+            <input type="radio" name="member" id="member2"> 비회원(주문조회)
+          </div>
+          <div class="login">
+              <div class="input">
+                <input type="text" name="id" id="id" placeholder="11번가 아이디">
+                <input type="password" name="pwd" id="pwd">
+              </div>
+            <input type="submit" value="로그인" id="login">
+          </div>
+          <div class="mainCheckbox">
+            <p><input type="checkbox" name="save" id="save"> 아이디 저장</p>
+            <p><a href="#">OTP 로그인</a> <input type="checkbox" name="otpLogin" id="otpLogin"></p>
+          </div>
+          <div class="mainButton">
+            <a href="./sign_up.html">회원가입</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

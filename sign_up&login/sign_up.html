@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .wrap {
+      width: 1120px;
+      border: 1px solid black;
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    header>div {
+      display: flex;
+      gap: 420px;
+      margin-bottom: 30px;
+    }
+
+    header>h1 {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      letter-spacing: 5px
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    #table3 span {
+      font-size: 14px;
+      color: black;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid gray;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+
+    table label {
+      font-weight: 700;
+    }
+
+    table #channel {
+      display: flex;
+      border: 0;
+      gap: 10px;
+    }
+
+    .mainfooter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .mainfooter>input {
+      width: 70px;
+      height: 40px;
+      border: 1px solid gray;
+    }
+
+    .mainfooter>input[type="submit"] {
+      background-color: fuchsia;
+      color: white;
+    }
+
+    span {
+      color: gray;
+    }
+
+    #tdArrdess span {
+      color: black;
+      font-size: 14px;
+    }
+
+    #tdArrdess input[type="text"] {
+      width: 250px;
+    }
+
+    input {
+      background-color: #F5F5F5;
+      border: 1px solid gray;
+    }
+    .mt-3{
+      display: flex;
+    }
+    .mt-3 > .btnI{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .mt-3 > .btnI > button{
+      height: 50%;
+    }
+    #cancle{
+      border: 1px solid gray;
+      background-color: rgba(146, 144, 144,0.3);
+      padding: 5px 10px;
+      height: 50%;
+      text-decoration-line: none;
+       display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <p>2025. 05. 15. 김화랑</p>
+        <p>회원가입</p>
+      </div>
+      <h1>회 원 가 입</h1>
+    </header>
+    <div class="main">
+      <form method="post" action="#">
+        <h3>사이트 이용정보 입력</h3>
+        <table>
+          <colgroup>
+            <col style="background-color: #F5F5F5; width: 15%;">
+          </colgroup>
+          <tr>
+            <td><label for="id">아이디</label></td>
+            <td>
+              <p>영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</p>
+              <input type="text" name="id" id="id"> <span id="idSpan"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pwd">비밀번호</label></td>
+            <td><input type="password" name="pwd" id="pwd"> <span id="pwdSpan"></span></td>
+          </tr>
+          <tr>
+            <td><label for="pwdOk">비밀번호 확인</label></td>
+            <td><input type="password" name="pwdOk" id="pwdOk"> <span id="pwdOkSpan"></span></td>
+          </tr>
+        </table>
+        <h3>개인정보 입력</h3>
+        <table>
+          <colgroup>
+            <col style="background-color: #F5F5F5; width: 15%;">
+            <col>
+            <col>
+          </colgroup>
+          <tr>
+            <td><label for="name">이름</label></td>
+            <td>
+              <input type="text" name="name" id="name"> <span id="nameSpan"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="nicName">닉네임</label></td>
+            <td>
+              <p>공백없이 한글, 영문, 숫자만 입력 가능(4글자이상)<br>
+                닉네임을 바꾸시면 앞으로 1일 이내에는 변경할 수 없습니다.</p>
+              <input type="text" name="nicName" id="nicName"> <span id="nicNameSpan"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">E-mail</label></td>
+            <td><input type="email" name="email" id="email"></td>
+          </tr>
+          <tr>
+            <td><label for="channel">가입경로</label></td>
+            <td id="channel">
+              <p>
+                <input type="radio" name="option" value="1" checked> 인터넷 검색
+              </p>
+              <p>
+                <input type="radio" name="option" value="2"> 배너광고
+              </p>
+              <p>
+                <input type="radio" name="option" value="3"> 관련기사를 보고
+              </p>
+              <p>
+                <input type="radio" name="option" value="4"> 미라지 홈페이지 보고
+              </p>
+              <p>
+                <input type="radio" name="option" value="5"> 주변사람 소개
+              </p>
+              <p>
+                <input type="radio" name="option" value="6"> 기타
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tel">전화번호</label></td>
+            <td><input type="tel" name="tel" id="tel"></td> <span id="telSpan"></span>
+          </tr>
+          <tr>
+            <td><label for="phoneNumber">휴대폰번호</label></td>
+            <td><input type="tel" name="phoneNumber" id="phoneNumber"> <span id="phoneNumberSpan"></span></td>
+          </tr>
+          <tr>
+            <td><label for="birth">생년월일</label></td>
+            <td><input type="date" name="birth" id="birth"> <span id="birthSpan"></span></td>
+          </tr>
+          <tr>
+            <td><label for="arrdess">주소</label></td>
+            <td id="tdArrdess">
+              <input type="text" class="form-control mb-2" id="zipp_code_id" name="zipp_code" maxlength="10"
+                style="width: 60px; display: inline;">
+              <input type="button" id="zipp_btn" class="btn btn-primary" onclick="execDaumPostcode()" value="주소검색"><br>
+              <input type="text" class="form-control mb-2" name="user_add1" id="UserAdd1" maxlength="40" required>
+              <span>기본주소</span><br>
+              <input type="text" class="form-control" name="user_add2" id="UserAdd2" maxlength="40">
+              <span>상세주소</span><br>
+              <input type="text" class="form-control" name="user_add3" id="UserAdd3" maxlength="40"> <span>참고항목</span>
+            </td>
+          </tr>
+        </table>
+        <h3>기타 개인설정</h3>
+        <table id="table3">
+          <colgroup>
+            <col style="background-color: #F5F5F5; width: 15%;">
+          </colgroup>
+          <tr>
+            <td><label for="kakao">카카오톡 메세지</label></td>
+            <td>
+              <input type="checkbox" name="kakao" id="kakao" checked> <span><b>카카오톡 메세지를 받겠습니다. </b></span>
+              <span style="color: red"> > 수신체크를 하시면 세일 소식을 가장 먼저 받아보실 수 있습니다.</span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mail">메일링서비스</label></td>
+            <td>
+              <input type="checkbox" name="mail" id="mail" checked> <span>정보 메일을 받겠습니다.</span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="sms">SMS 수신여부</label></td>
+            <td>
+              <input type="checkbox" name="mail" id="mail" checked> <span>휴대폰 문자메세지를 받겠습니다.</span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="infoOpen">정보공개</label></td>
+            <td>
+              <p>정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.</p>
+              <input type="checkbox" name="infoOpen" id="infoOpen" checked> <span>다른 분들이 나의 정보를 볼 수 있도록 합니다.</span>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="auto">자동등록방지</label></td>
+            <td>
+              <div class="mt-3">
+                  <img id="captchaImg" src="./captcha.png" title="캡차 이미지" alt="캡차 이미지" />
+                  <div class="btnI">
+                    <button><i class="fa-solid fa-volume-high"></i></button>
+                    <button><i class="fa-solid fa-rotate-left"></i></button>
+                  </div>
+                  <textarea name="textarea" id="textarea" style="resize: none;"></textarea>
+              </div>
+              <p>자동등록방지 숫자를 순서대로 입력하세요.</p>
+            </td>
+          </tr>
+        </table>
+        <div class="mainfooter">
+          <input type="submit" value="회원가입" id="submit">
+          <a href="./login.html" id="cancle">취소</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <!-- CDN 방식 사용 -->
+  <script>
+    function execDaumPostcode() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          // 팝업을 통한 검색 결과 항목 클릭 시 실행
+          var addr = ''; // 주소_결과값이 없을 경우 공백 
+          var extraAddr = ''; // 참고항목
+
+          //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+          if (data.userSelectedType === 'R') { // 도로명 주소를 선택
+            addr = data.roadAddress;
+          } else { // 지번 주소를 선택
+            addr = data.jibunAddress;
+          }
+
+          if (data.userSelectedType === 'R') {
+            if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+              extraAddr += data.bname;
+            }
+            if (data.buildingName !== '' && data.apartment === 'Y') {
+              extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+            }
+            if (extraAddr !== '') {
+              extraAddr = ' (' + extraAddr + ')';
+            }
+          } else {
+            document.getElementById("UserAdd1").value = '';
+          }
+
+          // 선택된 우편번호와 주소 정보를 input 박스에 넣는다.
+          document.getElementById('zipp_code_id').value = data.zonecode;
+          document.getElementById("UserAdd1").value = addr;
+          document.getElementById("UserAdd1").value += extraAddr;
+          document.getElementById("UserAdd2").focus(); // 우편번호 + 주소 입력이 완료되었음으로 상세주소로 포커스 이동
+        }
+      }).open();
+    }
+  </script>
+  <!-- <script>
+    // let id = document.querySelector('#id');
+    // let idSpan = document.querySelector('#idSpan');
+
+    // let pwd = document.querySelector('#pwd');
+    // let pwdSpan = document.querySelector('#pwdSpan');
+
+    // let pwdOk = document.querySelector('#pwdOk');
+    // let pwdOkSpan = document.querySelector('#pwdOkSpan');
+
+    // let name = document.querySelector('#name');
+    // let nameSpan = document.querySelector('#nameSpan');
+
+    // let email = document.querySelector('#email');
+    // let emailSpan = document.querySelector('#emailSpan');
+
+    // let tel = document.querySelector('#telName');
+    // let telSpan = document.querySelector('#telSpan');
+
+    // let phoneNumber = document.querySelector('#phoneNumber');
+    // let phoneNumberSpan = document.querySelector('#phoneNumberSpan');
+
+    // let birth = document.querySelector('#birth');
+    // let birthSpan = document.querySelector('#birthSpan');
+
+  </script> -->
+</body>
+
+</html>
