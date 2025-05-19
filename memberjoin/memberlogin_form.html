@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/memberlogin_form.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="headline">
+            <span style="text-align: start;">2025.5.15. 박강호</span><span style="text-align: center;">로그인</span><span></span>
+        </div>
+        <div class="login">
+            <table>
+                <caption>로그인</caption>
+                <colgroup>
+                    <col id="col1">
+                    <col id="col2">
+                    <col id="col3">
+                </colgroup>
+                <tr>
+                    <td><input type="radio" name="member" id="member">회원</td>
+                    <td><input type="radio" name="nonMember" id="nonMember">비회원(주문조회)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="id" id="id" placeholder="11번가 아이디"></td>
+                    <td rowspan="2" id="loginBtnTd"><a href="#" onclick="window.alert('로그인 버튼 클릭')">로그인</a></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="password" name="pw" id="pw"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" name="saveId" id="saveId"> 아이디저장</td>
+                    <td>OTP 로그인 <input type="checkbox" name="otpLogin" id="otpLogin"></td>
+                </tr>
+                <tr>
+                    <div class="buttons">
+                        <td colspan="3">
+                            <a href="signupPage.html" target="_blank"><button style="margin-top: 10px; width: 120px;">회원가입</button></a>
+                            <button style="width: 120px; margin-left: 10px;">아이디 찾기</button>
+                            <button style="width: 120px; margin-left: 10px;">비밀번호 찾기</button>
+                        </td>
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
