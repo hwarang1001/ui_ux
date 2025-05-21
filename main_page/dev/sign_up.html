@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid black;
+      background-color: rgba(198, 160, 110, 0.3);
+      padding: 20px 10px;
+      margin-bottom: 10px;
+    }
+    header > .photo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header > .photo > h1{
+      font-size: large;
+    }
+    header > .menu > ul{
+      display: flex;
+      gap: 20px;
+    }
+    header > .menu > ul > li{
+      list-style: none;
+    }
+    /* 전체 레이아웃 사이즈 */
+    #content{
+      width: 1000px;
+      margin: 0 auto;
+      border-radius: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    /* 슬라이드쇼 이미지 처리 */
+    #slide_show{
+      height: 300px;      
+      position: relative;
+    }
+    img{
+      max-width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 20px;
+    }
+    /* 네비게이션 처리 */
+    #navgateleft{
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgba(128, 128, 128,0.8);
+      position: absolute;
+      bottom: 50%;
+      left: 10%;
+      transform: translate(-50%, 50%);
+      z-index: 1;
+    }
+    #navgateright{
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgba(128, 128, 128,0.8);
+      position: absolute;
+      bottom: 50%;
+      right: 10%;
+      transform: translate(50%, 50%);
+      z-index: 1;
+    }
+    #navgateleft:hover, #navgateright:hover{
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    /* indicator 처리 */
+    #indicator{
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      color: black;
+      z-index: 1;
+    }
+    #indicator:visited { text-decoration: none; }
+    #indicator i{
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    #indicator i:hover{
+      color: rgb(255, 255, 255);
+    }
+    /* indicator 활성화 배경색 */
+    .active{
+      color: rgb(238, 166, 33);
+    }
+    /* 메인인 */
+    main > .main{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    main > .main > .nav, main > .main > .aside{
+      background-color: rgba(136, 214, 150, 0.3);
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
+    main > .main > .sign_up{
+      background-color: rgba(136, 214, 150, 0.3);
+      width: 50%;
+      border: 1px solid black;
+      padding: 10px;
+    }
+    main > .main > .sign_up > h2{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form{
+      display: flex;
+      flex-direction: column;
+      background-color: aliceblue;
+      height: 90%;
+      padding: 10px;
+    }
+    main > .main > .sign_up > form > input{
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form > .id{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form > .id > #id1{
+      width: 70%;
+    }
+    main > .main > .sign_up > form > .id > #id2{
+      width: 29%;
+    }
+    main > .main > .sign_up > form > .birth{
+      display: flex;
+      justify-content: space-between;
+    }
+    main > .main > .sign_up > form > .birth > input{
+      width: 33%;
+    }
+    main > .main > .sign_up > form > .phone{
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form > .phone > input{
+      width: 60%;
+    }
+    main > .main > .sign_up > form > .phone > button{
+      width: 38%;
+      background-color: rgba(136, 214, 150, 0.3);
+      color: white;
+      border: 1px solid black;
+    }
+    /* footer */
+    footer{
+      height: 100px;
+      background-color: rgba(203, 137, 16,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="photo">
+        <h1>MIRE PHOTO</h1>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+        </ul>
+      </div>
+      <div class="icon">
+
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <div id="slide_show">
+          <a href="#"><img src="./../media/slide-1.jpg" alt="#"></a>
+          <a href="#"><img src="./../media/slide-2.jpg" alt="#"></a>
+          <a href="#"><img src="./../media/slide-3.jpg" alt="#"></a>
+          <a href="#"><img src="./../media/slide-4.jpg" alt="#"></a>
+        </div>
+        <i class="fa-solid fa-circle-chevron-left" id="navgateleft"></i>
+        <i class="fa-solid fa-circle-chevron-right" id="navgateright"></i>
+        <div id="indicator">
+          <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+          <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+          <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+          <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+        </div>
+      </div>
+      <div class="main">
+        <div class="nav">
+          <h2>NAV</h2>
+        </div>
+        <div class="sign_up">
+          <h2>MIRE PICTURE</h2>
+          <form action="get">
+            <label for="id">아이디</label>
+            <div class="id">
+              <input type="text" name="id1" id="id1">
+              <input type="text" name="id2" id="id2" placeholder="@naver.com">
+            </div>
+            <label for="pw">비밀번호</label>
+            <input type="password" name="pw" id="pw">
+            <label for="pwOk">비밀번호 재확인</label>
+            <input type="password" name="pwOk" id="pwOk">
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name">
+            <label for="birth">생년월일</label>
+            <div class="birth">
+              <input type="text" name="birth" id="birth1" placeholder="년(4자)">
+              <input type="text" name="birth" id="birth2">
+              <input type="text" name="birth" id="birth3" placeholder="일">
+            </div>
+            <label for="gender">성별</label>
+            <input type="text" name="gender" id="gender">
+            <label for="email">본인 확인 이메일<span>(선택)</span></label>
+            <input type="text" name="email" id="email">
+            <label for="phone">휴대전화</label>
+            <input type="text" name="phone" id="phone1">
+            <div class="phone">
+              <input type="text" name="phone" id="phone2">
+              <button>인증번호 받기</button>
+            </div>
+            <input type="text" name="phone" id="phone3">
+            <input type="submit" value="가입하기">
+          </form>
+        </div>
+        <div class="aside">
+          <h2>ASIDE</h2>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <h2>FOOTER</h2>
+      </div>
+    </footer>
+  </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+      // 1. 객체 찾기
+      const content = document.querySelector("#content"); // 회전목마 전체 레이아웃
+      const imgList = document.querySelectorAll("#slide_show img"); // 회전목마 이미지배열리스트노드
+      const navgateleft = document.querySelector("#navgateleft"); // 회전목마 왼쪽네비게이트
+      const navgateright = document.querySelector("#navgateright"); // 회전목마 오른쪽네비게이트
+      const indicatorList = document.querySelectorAll("#indicator > a"); // 회전목마 인디케이터 리스트
+      
+      // 2. 함수만들기 (시간에 따라서 이미지 화면 1, 인디게이터 1이 선택되어 화면에 보여진다.)
+      let list = [1, 0, 0, 0];
+      let timerId; // 타이머 핸들
+      function listArray(){
+        for(let i = 0; i < list.length; i++){
+          imgList[i].style.zIndex = list[i];
+        }
+        for(let i = 0; i < list.length; i++){
+          indicatorList[i].classList.remove("active");
+        }
+        let index = list.indexOf(1); // 값1이 들어있는 인덱스의 값을 리턴해줌 
+        indicatorList[index].classList.add("active"); 
+      }
+      listArray();
+      // 왼쪽네비게이터 클릭하면 왼쪽화면으로 이동
+      navgateleft.addEventListener('click',()=>{
+        // list = [1, 0, 0, 0]; 왼쪽에서 빼서 오른쪽 입력 list = [0, 0, 0, 1];
+        let value = list.shift();
+        list.push(value);
+        listArray();
+      });
+      // 오른쪽네비게이터 클릭하면 왼쪽화면으로 이동
+      navgateright.addEventListener('click',()=>{
+        // list = [1, 0, 0, 0]; 오른쪽에서 빼서 왼쪽 입력 list = [0, 1, 0, 0];
+        list.unshift(list.pop());
+        listArray();
+      });
+      // 3초마다 navgateright 기능을 불러준다.
+      function startTimer(){
+        timerId = setInterval(()=>{
+          list.unshift(list.pop());
+          listArray();
+        }, 3000);
+      }
+      startTimer();      
+      // content영역에 마우스가 올라가면 타이머가 멈추게 한다.
+      content.addEventListener("mouseenter", ()=>{clearInterval(timerId)});
+      
+      // content영역에 마우스가 빠져나가면 타이머가 작동하게 한다.
+      content.addEventListener("mouseleave", ()=>{startTimer()});
+      
+      // indicator 클릭하면 해당되는 화면으로 이동해야된다.
+      for(let i = 0; i < indicatorList.length; i++){
+        indicatorList[i].addEventListener('click',()=>{
+          let index = list.indexOf(1);
+          list[index] = 0;
+          list[i] = 1;
+          listArray();
+        });
+      }
+    }); // end of DOMContentLoaded
+  </script>
+</body>
+</html>
