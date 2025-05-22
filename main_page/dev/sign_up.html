@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./../css/sign_up.css">
   <script src="./../js/sign_up.js" defer></script>
 </head>
+
 <body onload="onLoad()">
   <div class="wrap">
     <header>
@@ -15,12 +19,19 @@
         <i class="fa-solid fa-camera-retro"></i>
         <h1>MIRE PHOTO</h1>
       </div>
-      <div class="menu">
-        <ul>
-          <li>menu</li>
-          <li>menu</li>
-          <li>menu</li>
-          <li>menu</li>
+      <div class="div-menu">
+        <ul class="menu">
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">menu</a>
+            <ul class="dropdown-content">
+              <li><a href="">sub</a></li>
+              <li><a href="">sub</a></li>
+              <li><a href="">sub</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="icon">
@@ -116,4 +127,5 @@
     </footer>
   </div>
 </body>
+
 </html>

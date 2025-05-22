@@ -1,15 +1,13 @@
- * {
+*{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    .wrap {
+    .wrap{
       width: 1000px;
       margin: 0 auto;
     }
-
-    header {
+    header{
       display: flex;
       justify-content: space-between;
       border: 1px solid black;
@@ -17,20 +15,29 @@
       padding: 20px 10px;
       margin-bottom: 10px;
     }
-
-    header>.photo {
+    header > .photo{
       display: flex;
       justify-content: center;
       align-items: center;
       margin-left: 10px;
     }
-
-    header>.photo>h1 {
+    header > .photo > h1{
       margin-left: 10px;
       font-size: large;
     }
-
-    header>.menu>ul {
+    ul {
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
+    }
+    .menu > li a{
+      text-decoration: none;
+      color: black;
+    }
+    header > .menu > ul{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,16 +45,53 @@
       font-weight: 700;
       gap: 30px;
     }
-
-    header>.menu>ul>li {
+    header > .menu > ul > li{
       list-style: none;
     }
-
-    header>.icon>i {
+    /* 메뉴 */
+    ul.menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    ul.menu > li > a{
+      display: inline-block;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+    }
+    ul.menu > li > a:hover{
+      background-color: rgb(122, 229, 193);
+    }
+    /* 서브메뉴 */
+    ul.menu > li.dropdown:hover > ul.dropdown-content{
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 5px 10px;;      
+    }
+    ul.dropdown-content{
+      position: absolute;
+      display: none;
+    }
+    ul.dropdown-content{
+      z-index: 1000;
+      background-color: rgba(198, 160, 110, 0.3);;
+    }
+    ul.dropdown-content a{
+       display: block;
+      padding: 10px;
+      width: 100px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    ul.dropdown-content a:hover{
+      background-color: rgb(122, 229, 193);
+    }
+    header > .icon > i{
       margin-right: 20px;
     }
-
-    header>.icon>a {
+    header > .icon > a{
       display: inline-block;
       height: 30px;
       margin-right: 10px;
@@ -57,23 +101,20 @@
       background-color: black;
       border-radius: 10px;
     }
-
     /* 전체 레이아웃 사이즈 */
-    #content {
+    #content{
       width: 1000px;
       margin: 0 auto;
       border-radius: 20px;
       position: relative;
       margin-bottom: 10px;
     }
-
     /* 슬라이드쇼 이미지 처리 */
-    #slide_show {
-      height: 300px;
+    #slide_show{
+      height: 300px;      
       position: relative;
     }
-
-    img {
+    img{
       width: 100%;
       height: 100%;
       position: absolute;
@@ -82,64 +123,54 @@
       border-radius: 20px;
       object-fit: cover;
     }
-
     /* 네비게이션 처리 */
-    #navgateleft {
+    #navgateleft{
       font-size: 2.5rem;
       font-weight: 700;
-      color: rgba(128, 128, 128, 0.8);
+      color: rgba(128, 128, 128,0.8);
       position: absolute;
       bottom: 50%;
       left: 10%;
       transform: translate(-50%, 50%);
       z-index: 1;
     }
-
-    #navgateright {
+    #navgateright{
       font-size: 2.5rem;
       font-weight: 700;
-      color: rgba(128, 128, 128, 0.8);
+      color: rgba(128, 128, 128,0.8);
       position: absolute;
       bottom: 50%;
       right: 10%;
       transform: translate(50%, 50%);
       z-index: 1;
     }
-
-    #navgateleft:hover,
-    #navgateright:hover {
+    #navgateleft:hover, #navgateright:hover{
       color: rgb(255, 255, 255);
       cursor: pointer;
     }
-
     /* indicator 처리 */
-    #indicator {
+    #indicator{
       position: absolute;
       left: 50%;
       bottom: 20px;
       transform: translateX(-50%);
-      color: black;
+      display: flex;
+      color: rgba(128, 128, 128,0.8);
+      gap: 10px;
       z-index: 1;
     }
-
-    #indicator:visited {
-      text-decoration: none;
-    }
-
-    #indicator i {
+    #indicator:visited { text-decoration: none; }
+    #indicator i{
       font-size: 1.5rem;
       font-weight: 700;
     }
-
-    #indicator i:hover {
+    #indicator i:hover{
       color: rgb(255, 255, 255);
     }
-
     /* indicator 활성화 배경색 */
-    .active {
+    .active{
       color: rgb(238, 166, 33);
     }
-
     /* 메인 */
     main>.main {
       display: flex;
