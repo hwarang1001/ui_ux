@@ -1,0 +1,222 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid black;
+      background-color: rgba(198, 160, 110, 0.3);
+      padding: 20px 10px;
+      margin-bottom: 10px;
+    }
+    header > .photo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+    }
+    header > .photo > h1{
+      margin-left: 10px;
+      font-size: large;
+    }
+    ul {
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: rgba(128, 128, 128,0.8);
+    }
+    header > .menu > ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+      font-weight: 700;
+      gap: 30px;
+    }
+    header > .menu > ul > li{
+      list-style: none;
+    }
+    header > .icon > i{
+      margin-right: 20px;
+    }
+    header > .icon > a{
+      display: inline-block;
+      height: 30px;
+      margin-right: 10px;
+      border: 1px solid black;
+      text-decoration: none;
+      color: white;
+      background-color: black;
+      border-radius: 10px;
+    }
+    /* 전체 레이아웃 사이즈 */
+    #content{
+      width: 1000px;
+      margin: 0 auto;
+      border-radius: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    /* 슬라이드쇼 이미지 처리 */
+    #slide_show{
+      height: 300px;      
+      position: relative;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    /* 네비게이션 처리 */
+    #navgateleft{
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgba(128, 128, 128,0.8);
+      position: absolute;
+      bottom: 50%;
+      left: 10%;
+      transform: translate(-50%, 50%);
+      z-index: 1;
+    }
+    #navgateright{
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgba(128, 128, 128,0.8);
+      position: absolute;
+      bottom: 50%;
+      right: 10%;
+      transform: translate(50%, 50%);
+      z-index: 1;
+    }
+    #navgateleft:hover, #navgateright:hover{
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    /* indicator 처리 */
+    #indicator{
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 1;
+    }
+    #indicator:visited { text-decoration: none; }
+    #indicator i{
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    #indicator i:hover{
+      color: rgb(255, 255, 255);
+    }
+    /* indicator 활성화 배경색 */
+    .active{
+      color: rgb(238, 166, 33);
+    }
+    /* 메인 */
+    main > .main{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    main > .main > .nav, main > .main > .aside{
+      background-color: rgba(136, 214, 150, 0.3);
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
+    main > .main > .sign_up{
+      background-color: rgba(136, 214, 150, 0.3);
+      width: 50%;
+      border: 1px solid black;
+      padding: 10px;
+    }
+    main > .main > .sign_up > h2{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form{
+      display: flex;
+      flex-direction: column;
+      background-color: aliceblue;
+      padding: 10px;
+    }
+    main > .main > .sign_up > form input{
+      border: 0;
+      height: 30px;
+    }
+    main > .main > .sign_up > form > input{
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form > .id{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form > .id > #id1{
+      width: 68%;
+    }
+    main > .main > .sign_up > form > .id > #id2{
+      width: 31%;
+    }
+    main > .main > .sign_up > form > .birth{
+      display: flex;
+      justify-content: space-between;
+    }
+    main > .main > .sign_up > form > .birth > input, select{
+      width: 33%;
+       border: 0;
+    }
+    main > .main > .sign_up > form > #gender{
+      width: 100%;
+      height: 30px;
+      border: 0;
+    }
+    main > .main > .sign_up > form > #phone{
+      width: 100%;
+      border: 0;
+      height: 30px;
+      margin-bottom: 10px;
+    }
+    main > .main > .sign_up > form > .phone{
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+    main > .main > .sign_up > form > .phone > input{
+      width: 64%;
+    }
+    main > .main > .sign_up > form > .phone > button{
+      width: 35%;
+      background-color: rgba(15, 114, 33, 0.8);
+      color: white;
+      border: 1px solid black;
+    }
+    main > .main > .sign_up > form > #submit{
+      background-color: rgba(15, 114, 33, 0.8);
+      color: white;
+      height: 30px;
+    }
+    /* footer */
+    footer{
+      height: 100px;
+      background-color: rgba(203, 137, 16,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
