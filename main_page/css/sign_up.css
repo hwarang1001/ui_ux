@@ -15,6 +15,9 @@
       padding: 20px 10px;
       margin-bottom: 10px;
     }
+    span{
+      font-size: 0.8rem;
+    }
     header > .photo{
       display: flex;
       justify-content: center;
@@ -262,6 +265,7 @@
       background-color: rgba(15, 114, 33, 0.8);
       color: white;
       height: 30px;
+      border: 1px solid gray;
     }
     /* footer */
     footer{
